@@ -1,0 +1,10 @@
+pyspng
+instagram-scraper==1.7.0
+tqdm
+numpy
+click
+pillow
+psutil
+scipy
+requests
+imageio-ffmpeg==0.4.3

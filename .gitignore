@@ -1,0 +1,11 @@
+__pycache__/
+.cache/
+env
+datasets
+tmp/*
+training-runs
+instagram-scraper.log
+pretrained
+generated
+out
+projections
