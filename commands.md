@@ -37,5 +37,5 @@ Example
 --resume=/home/valerio/francescom/stylegan2-ada-pytorch/training-runs/00035-modigliani-mirror-auto1-gamma25-resumecustom/network-snapshot-000448.pkl `
 
 # Generate
-`python generate.py --outdir=<output folder> --trunc=<[0, 1] range> --seeds=0,1,2\
-    --network=<local_path_to_network.pkl> --device=<cpu or gpu>`
+`python generate.py --outdir=out/goat --trunc=0.8 --seeds=0,1,2 \
+    --network=models/goat.pkl --device=cpu`

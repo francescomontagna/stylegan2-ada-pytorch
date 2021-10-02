@@ -1,4 +1,4 @@
-name: /home/valerio/francescom/stylegan2-ada-pytorch/env
+name: env
 channels:
   - pytorch
   - defaults

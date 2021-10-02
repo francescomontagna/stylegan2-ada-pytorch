@@ -1,3 +1,15 @@
+## Environment
+`conda cerate env -f environment.yml`
+
+## Generate
+Create the `model` folder with trained .pkl files.  
+Activate the environment with `conda activate env`.  
+Generate using the command:  
+
+`python generate.py --outdir=out/<output folder> --trunc=<[0,1] RANGE> --seeds=<One seed for each generated image> \
+    --network=models/<model.pkl> --device=<cpu or gpu>`
+
+
 ## StyleGAN2-ADA &mdash; Official PyTorch implementation
 
 ![Teaser image](./docs/stylegan2-ada-teaser-1024x252.png)
