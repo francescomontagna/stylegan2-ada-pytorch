@@ -62,7 +62,7 @@ def padding(img, target_dim, color = 'w'):
     else:
         col_code = (0, 0, 0)
 
-    padded = Image.new(img.mode, (target_dim, target_dim), color=(255, 255, 255))
+    padded = Image.new(img.mode, (target_dim, target_dim), color=col_code)
     
     width, height = img.size
     delta_w = (target_dim - width)//2
@@ -119,7 +119,7 @@ def resize(src_folder, dest_folder, target_dim, pad = False, color = 'w'):
         dest_path = dest_folder + "/" + img_path
 
         img_file = Image.open(src_path)
-        img_resize(img_file, target_dim, pad, color)
+        img_file = img_resize(img_file, target_dim, pad, color)
 
         img_file.convert("RGB").save(dest_path, "PNG")
 

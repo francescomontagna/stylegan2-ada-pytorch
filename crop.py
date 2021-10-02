@@ -2,7 +2,7 @@ from util import crop
 import argparse
 
 """
-For info on how crop is don see util.crop and https://stackoverflow.com/questions/9983263/how-to-crop-an-image-using-pil
+For info on how crop is done see util.crop and https://stackoverflow.com/questions/9983263/how-to-crop-an-image-using-pil
 """
 
 

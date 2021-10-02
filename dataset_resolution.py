@@ -5,10 +5,9 @@ from PIL import Image
 from util import resize
 
 def main():
-    target_dim = 512
-    src_folder = "datasets/raw/modigliani"
-    dest_folder = f"datasets/raw/resized-{target_dim}/modigliani"
-    folders = ["pinterest-modigliani", "wikiart-modigliani"]
+    target_dim = 256
+    src_folder = "datasets/raw/modigliani-highres-squared"
+    dest_folder = f"datasets/raw/modigliani-highres-{target_dim}"
 
     try:
         os.makedirs(dest_folder)
@@ -17,8 +16,7 @@ def main():
         os.system(f"rm -r {dest_folder}")
         os.makedirs(dest_folder)
 
-    for folder in folders:
-        resize(src_folder + "/" + folder, dest_folder, target_dim, pad = True)
+    resize(src_folder, dest_folder, target_dim, pad = False)
         
 
 main()
