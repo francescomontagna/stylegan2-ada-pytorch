@@ -1,8 +1,15 @@
+"""
+Script for custom resizing of the dataset.
+Differently from dataset_tools, it allows resizing using thumbnail, keeping all the image content.
+It also allows padding rather than cropping to get squared images
+"""
+
 import os
 import numpy as np
 
 from PIL import Image
 from util import resize
+
 
 def main():
     target_dim = 256
