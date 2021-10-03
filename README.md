@@ -1,10 +1,13 @@
 ## Environment
-`conda cerate env -f environment.yml`
+Create the environment:  
+`conda cerate env -f environment.yml`  
+
+Activate the environment:  
+with `conda activate env`.  
 
 ## Generate
-Create the `model` folder with trained .pkl files.  
-Activate the environment with `conda activate env`.  
-Generate using the command:  
+Create the `models` folder with trained .pkl files.  
+Generate images using the command:  
 
 `python generate.py --outdir=out/<output folder> --trunc=<[0,1] RANGE> --seeds=<One seed for each generated image> \
     --network=models/<model.pkl> --device=<cpu or gpu>`
