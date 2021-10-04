@@ -5,14 +5,15 @@ It also allows padding rather than cropping to get squared images
 """
 
 import os
+import sys
 import numpy as np
 
 from PIL import Image
 from util import resize
 
 
-def main():
-    target_dim = 256
+def main(resolution):
+    target_dim = resolution
     src_folder = "datasets/raw/modigliani-highres-squared"
     dest_folder = f"datasets/raw/modigliani-highres-{target_dim}"
 
@@ -26,4 +27,5 @@ def main():
     resize(src_folder, dest_folder, target_dim, pad = False)
         
 
-main()
+resolution = sys.argv[1]
+main(int(resolution))

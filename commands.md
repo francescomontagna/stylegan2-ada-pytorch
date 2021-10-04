@@ -18,7 +18,12 @@ Example
     --network=/home/valerio/francescom/stylegan2-ada-pytorch/training-runs/00011-modigliani-mirror-auto1-gamma50-resumeffhq512/ network-snapshot-000192.pkl`
 
 # Dataset preparation
-`python dataset_tool.py --source datasets/raw/modigliani-highres-256 --dest tmp/modigliani-highres --transform=center-crop --width=256 --height=256`
+First, run `dataset_resolution.py` script:  
+`python dataset_resolution.py <resolution: {256, 512, 1024}>`
+
+The, run `dataset_tool.py`
+`python dataset_tool.py --source datasets/raw/<src data folder> --dest tmp/<dest data folder> --transform=center-crop --width=<resolution> --height=<resolution>`
+python dataset_tool.py --source datasets/raw/modigliani-highres-1024 --dest tmp/modigliani-highres-1024 --transform=center-crop --width=1024 --height=1024
 
 # Training: 
 - Should try a couple of gamma, 50-100 if it is noisy dataset, else around 10. Stop training and lower when happy, just tweak
